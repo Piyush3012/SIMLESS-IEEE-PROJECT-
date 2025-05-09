@@ -1,0 +1,8 @@
+flask
+pymongo
+opencv-python
+numpy
+pillow
+imagehash
+cryptography
+boto3
