@@ -1,6 +1,11 @@
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
 
-client = MongoClient("mongodb+srv://SIMLESS_DB:simless_project_3@simless.f3nk9hk.mongodb.net/")
+
+load_dotenv()  # Load variables from .env
+mongo_uri = os.getenv("MONGO_URI")  # Fetch the value
+client = MongoClient(mongo_uri)
 db = client["deduplication_db"]
 hash_collection = db["hashes"]
 
